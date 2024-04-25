@@ -49,7 +49,7 @@ After a few moments the VM is joined to Entra ID. This could be checked in the [
 
 Create a VM and add the extension afterwords.
 
-```bat
+```v
 az group create --name myResourceGroup --location southcentralus
 az vm create --resource-group myResourceGroup --name myVM --image Win2019Datacenter --assign-identity --admin-username azureuser --admin-password yourpassword
 
@@ -101,7 +101,7 @@ Similar to Windows VMs, the exetension could be installed at the moment you crea
 
 To enable it to existing VMs with Azure CLI use the following command:
 
-```bat
+```v
 az vm extension set \
     --publisher Microsoft.Azure.ActiveDirectory \
     --name AADSSHLoginForLinux \
@@ -113,13 +113,13 @@ az vm extension set \
 
 To sign in you have to add an extention to Azure CLI:
 
-```bat
+```v
 az extension add --name ssh
 ```
 
 Then connect to Azure Linux VM:
 
-```bat
+```v
 az login
 az ssh vm -n <VM-Name> -g <Resource-Group-Name>
 ```
