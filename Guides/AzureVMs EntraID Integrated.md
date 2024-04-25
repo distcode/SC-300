@@ -7,7 +7,6 @@ There are some differences between Windows and Linux VMs. For both VM types, Azu
 
 ## Azure RBAC
 
-<!-- [ ] description of nescesary RBAC roles -->
 Assign the users which should be able to sign in to the VMs interactively with their Entra Account the role
 
 - _Virtual Machine Administrator Login_ (signed in user has local admin permissions) or
@@ -50,7 +49,7 @@ After a few moments the VM is joined to Entra ID. This could be checked in the [
 
 Create a VM and add the extension afterwords.
 
-```bash
+```bat
 az group create --name myResourceGroup --location southcentralus
 az vm create --resource-group myResourceGroup --name myVM --image Win2019Datacenter --assign-identity --admin-username azureuser --admin-password yourpassword
 
@@ -102,7 +101,7 @@ Similar to Windows VMs, the exetension could be installed at the moment you crea
 
 To enable it to existing VMs with Azure CLI use the following command:
 
-```bash
+```bat
 az vm extension set \
     --publisher Microsoft.Azure.ActiveDirectory \
     --name AADSSHLoginForLinux \
@@ -114,13 +113,13 @@ az vm extension set \
 
 To sign in you have to add an extention to Azure CLI:
 
-```bash
+```bat
 az extension add --name ssh
 ```
 
 Then connect to Azure Linux VM:
 
-```bash
+```bat
 az login
 az ssh vm -n <VM-Name> -g <Resource-Group-Name>
 ```
