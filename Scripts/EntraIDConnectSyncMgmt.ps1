@@ -9,4 +9,24 @@ Get-AdSyncScheduler
 Get-ADSyncExportDeletionThreshold
 Enable-ADSyncExportDeletionThreshold -DeletionThreshold 50
 
-# 
+# Disable Entra Connect Sync
+## Link1: https://www.alitajran.com/uninstall-azure-ad-connect/
+## Link2: https://www.alitajran.com/disable-active-directory-synchronization/
+
+## Install nescesary modules
+Install-Module Microsoft.Graph -Force
+Install-Module Microsoft.Graph.Beta -AllowClobber -Force
+
+## Connect MG Graph
+Connect-MgGraph -Scopes "Organization.ReadWrite.All"
+
+## Disable Sync
+$OrgID = (Get-MgOrganization).Id
+$params = @{
+    onPremisesSyncEnabled = $false
+}
+
+Update-MgBetaOrganization -OrganizationId $OrgID -BodyParameter $params
+
+Get-MgOrganization | Select-Object DisplayName, OnPremisesSyncEnabled
+
