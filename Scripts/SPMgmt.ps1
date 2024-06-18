@@ -17,7 +17,7 @@ $CertParam = @{
     'KeyLength'         = 2048
     'KeyExportPolicy'   = 'Exportable'
     'DnsName'           = 'server.dist.at'
-    'FriendlyName'      = 'GraphApi - AutomationApp'
+    'FriendlyName'      = 'SP Sign In Certificate'
     'CertStoreLocation' = 'Cert:\LocalMachine\My\'
     'NotAfter'          = (Get-Date).AddYears(1)
 }
