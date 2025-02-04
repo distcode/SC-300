@@ -9,4 +9,4 @@ This documents is a collection of important and/or useful links related to SC-30
 | Entra Connect sync | [Enable synchronizatin of UserType](https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/how-to-connect-sync-change-the-configuration#enable-synchronization-of-usertype) | Sync on-prem Users as Guest to Entra ID. |
 | Entra Cloud sync | [Documentation](https://learn.microsoft.com/en-us/entra/identity/hybrid/cloud-sync/what-is-cloud-sync) ||
 | Provisioning to Azure | [Entra Cloud sync provisioning](https://learn.microsoft.com/en-us/entra/identity/hybrid/cloud-sync/how-to-configure-entra-to-active-directory) ||
-| idPowerApp | https://idpowertoys.merill.net/ | Nice tool to document CA policies. |
+| idPowerApp | [CA documenter](https://idpowertoys.merill.net/) | Nice tool to document CA policies. |
