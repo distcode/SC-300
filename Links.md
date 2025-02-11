@@ -11,3 +11,4 @@ This documents is a collection of important and/or useful links related to SC-30
 | Provisioning to Azure | [Entra Cloud sync provisioning](https://learn.microsoft.com/en-us/entra/identity/hybrid/cloud-sync/how-to-configure-entra-to-active-directory) ||
 | idPowerApp | [CA documenter](https://idpowertoys.merill.net/) | Nice tool to document CA policies. |
 | Entra Hybrid | [Connect vs. Cloud sync](https://learn.microsoft.com/en-us/entra/identity/hybrid/cloud-sync/what-is-cloud-sync#comparison-between-microsoft-entra-connect-and-cloud-sync) ||
+| Default permissions | [Compare memeber and guest default permissions](https://learn.microsoft.com/en-gb/entra/fundamentals/users-default-permissions#compare-member-and-guest-default-permissions) ||
