@@ -26,7 +26,7 @@ $params = @{
     onPremisesSyncEnabled = $false
 }
 
-Update-MgBetaOrganization -OrganizationId $OrgID -BodyParameter $params
+Update-MgOrganization -OrganizationId $OrgID -BodyParameter $params
 
 Get-MgOrganization | Select-Object DisplayName, OnPremisesSyncEnabled
 
