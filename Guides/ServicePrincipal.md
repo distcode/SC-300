@@ -110,7 +110,7 @@ Alternatively you could use also a hash table.
 
 ```PowerShell
 $pwdcred = @{
-    DisplayName = "Secret0X"
+    DisplayName = "SecretX"
     EndDateTime = (Get-Date).AddDays(180)
     StartDateTime = (Get-Date)
 }
@@ -207,7 +207,7 @@ $SP = Get-MgServicePrincipal -Filter "DisplayName eq 'SC3-Demo-AppSP'"
 Remove-MgServicePrincipal -ServicePrincipalId $SP.Id
 ```
 
->Note: The last command removed only the SP but not the application object.
+>Note: The last command removes only the SP but not the application object.
 
 To remove the application object:
 
