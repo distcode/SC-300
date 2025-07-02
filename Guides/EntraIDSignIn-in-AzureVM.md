@@ -7,18 +7,18 @@ This article describes how to sign in to an Azure VM with an user of Entra ID in
 Table of Content
 
 + [Windows VMs](#windows-vms)
-  + [Preparation and Requirements](#preparation-and-requirements)
-+ [Passwordless Authentication](#passwordless-authentication)
+  + [Preparation and Requirements for Windows VMs](#preparation-and-requirements-for-windows-vms)
++ [Password-less Authentication](#password-less-authentication)
   + [Password Authentication](#password-authentication)
 + [Linux VMs](#linux-vms)
-  + [Preparation and Requirements](#preparation-and-requirements-1)
+  + [Preparation and Requirements for Linux VMs](#preparation-and-requirements-for-linux-vms)
   + [Sign in via SSH](#sign-in-via-ssh)
 
 ---
 
 ## Windows VMs
 
-### Preparation and Requirements
+### Preparation and Requirements for Windows VMs
 
 Before you are able to sign in to an Azure VM with an Entra account you have to check the supported operation system. Microsoft supports this feature at the moment on the following systems:
 
@@ -27,11 +27,11 @@ Before you are able to sign in to an Azure VM with an Entra account you have to 
 + Windows 10 1809 and later
 + Windows 11 21H2 and later
 
-Then check, if there's already a device in Entra ID with the same name as your Azure VM. By installing the extension ***Azure AD based Windows Login / AADLogin*** the VM will be joined. If a device with same devicename as the hostname of your VM exists, the join process could not be finished. In the Audit Log of Entra ID you could see an Failure entry initiated by *Device Registraton Service*. And of course, to sign in with an Entra ID account is not possible :wink:
+Then check, if there's already a device in Entra ID with the same name as your Azure VM. By installing the extension ***Azure AD based Windows Login / AADLogin*** the VM will be joined. If a device with same device name as the hostname of your VM exists, the join process could not be finished. In the Audit Log of Entra ID you could see an Failure entry initiated by *Device Registration Service*. And of course, to sign in with an Entra ID account is not possible :wink:
 
 The VM needs a system assigned managed identity to run the extension. This should be checked if you are working with an already existing VM. For newly created VMs the managed identity is created automatically if you enable Entra ID login.
 
-For the installation of the extension ***Azure AD based Windows Login / AADLogin*** the VM must be running. It's also possible to install that extension at the moment you are createing the VM.
+For the installation of the extension ***Azure AD based Windows Login / AADLogin*** the VM must be running. It's also possible to install that extension at the moment you are creating the VM.
 
 ![Deployment of an VM](../Guides/_images/azure-portal-login-with-azure-ad.png)
 
@@ -42,12 +42,12 @@ After you have installed the extension successfully, assign the appropriate RBAC
 
 For more requirements read the [documentation](https://learn.microsoft.com/en-us/entra/identity/devices/howto-vm-sign-in-azure-ad-windows#requirements).
 
-## Passwordless Authentication
+## Password-less Authentication
 
 Following the client-side configure is shown so you could enforce
 
 + multifactor Authentication
-+ passwordlesse authentication
++ password-less authentication
 + device compliance state via conditional access
 
 1. In the Azure portal, download the RDP-file for connecting to your VM.
@@ -62,7 +62,7 @@ Following the client-side configure is shown so you could enforce
     > Note: Instead of altering the RDP-file in an editor you could also set the advanced option *Use a web account to sign in to the remote computer* in Remote Desktop Connection tool.
 4. Ensure the VM name could be successfully resolved. Maybe you have to change DNS or your hosts file.
 5. Save the file and double click it to connect.
-6. Sign in with Entra ID user principal name. If there are any issuse, use the format *AzureAD\\user\@domain.com*.
+6. Sign in with Entra ID user principal name. If there are any issues, use the format *AzureAD\\user\@domain.com*.
 
 ### Password Authentication
 
@@ -72,17 +72,17 @@ This configuration shows you the client-side configuration so you could use the 
 
 1. In the Azure portal, download the RDP-file for connecting to your VM.
 2. Double click it to connect.
-3. Sign in with your user principal name. If there are any issuse, use the format *AzureAD\\user\@domain.com*.
+3. Sign in with your user principal name. If there are any issues, use the format *AzureAD\\user\@domain.com*.
 
 > Note: In this case you could use the IP address of your machine and not necessarily the hostname.
 
 ## Linux VMs
 
-### Preparation and Requirements
+### Preparation and Requirements for Linux VMs
 
-The extions for Linux allows you to sign in with Entra ID in SSH sessions. Use the following steps to get to know how.
+The extensions for Linux allows you to sign in with Entra ID in SSH sessions. Use the following steps to get to know how.
 
-Similar to Windows VMs, the exetension could be installed at the moment you create a new VM. Also you can add it to existing VMs in the portal manually.
+Similar to Windows VMs, the extension could be installed at the moment you create a new VM. Also you can add it to existing VMs in the portal manually.
 
 To enable it to existing VMs with Azure CLI use the following command:
 
@@ -98,7 +98,7 @@ For more information read [Microsoft documentation](https://learn.microsoft.com/
 
 ### Sign in via SSH
 
-To sign in you have to add an extention to Azure CLI:
+To sign in you have to add an extension to Azure CLI:
 
 ```v
 az extension add --name ssh
