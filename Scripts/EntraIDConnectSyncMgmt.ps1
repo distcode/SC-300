@@ -18,7 +18,7 @@ Install-Module Microsoft.Graph -Force
 Install-Module Microsoft.Graph.Beta -AllowClobber -Force
 
 ## Connect MG Graph
-Connect-MgGraph -Scopes "Organization.ReadWrite.All"
+Connect-MgGraph -Scopes "Organization.ReadWrite.All" -TenantId 'c76a23fa-86aa-4683-bdb3-e2f13f4e7e42'
 
 ## Disable Sync
 $OrgID = (Get-MgOrganization).Id
