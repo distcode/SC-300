@@ -4,22 +4,24 @@ Welcome to my repository of companion files for the Microsoft course SC-300.
 
 ---
 
+## General information
+
 Exam and Learning Paths: <https://learn.microsoft.com/en-us/credentials/certifications/identity-and-access-administrator/?practice-assessment-type=certification>
 
 Lab Environment: <https://lms.godeploy.it>
 
-
 ---
 
-**Evaluation**
+## At the end
 
-https://www.flane.de/eval
-Password = 26P3MN2L
+### Evaluation
 
+<https://www.flane.de/eval>
+Password = _\<will be provided at last day of course>_
 
-**Achievement Code**
+### Achievement Code
 
-https://www.flane.de/ms-achievement
-Code: 799LMM
+<https://www.flane.de/ms-achievement>
+Code: _\<will be provided at last day of course>_
 
 Thank you
