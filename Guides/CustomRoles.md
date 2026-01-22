@@ -122,7 +122,7 @@ $user = Get-MgUser -Filter "userPrincipalName eq 'sherlock@<yourDomain>'"
 $group = Get-MgGroup -Filter "DisplayName eq 'Detectives'"
 ```
 
-To get the custom role ID use the following command: 
+To get the custom role ID use the following command:
 
 ```PowerShell
 $CustomRole = Get-MgRoleManagementDirectoryRoleDefinition | Where-Object { $_.DisplayName -like 'SC300*' }

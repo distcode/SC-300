@@ -17,11 +17,11 @@ Lab Environment: <https://lms.godeploy.it>
 ### Evaluation
 
 <https://www.flane.de/eval>
-Password = _\<will be provided at last day of course>_
+Password = _21Q3PN9D_
 
 ### Achievement Code
 
 <https://www.flane.de/ms-achievement>
-Code: _\<will be provided at last day of course>_
+Code: _8XLKDZ_
 
 Thank you
