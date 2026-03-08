@@ -47,7 +47,7 @@ $App = New-MgApplication -DisplayName 'Sc3-Demo-AppSP'
 
 >Note: The Application ID is already created and must be used in the next command.
 
-At this point, you could find in the Entra ID portal under `Application registration` already an entry, ==but not in _Enterprise applications_==.
+At this point, you could find in the Entra ID portal under `Application registration` already an entry, but ==not== in _Enterprise applications_.
 
 Then, create a SP an associate it to the application:
 
