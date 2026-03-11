@@ -68,7 +68,7 @@ Following the client-side configure is shown so you could enforce
 
 This configuration shows you the client-side configuration so you could use the windows logon screen for signing in.
 
->Note::exclamation:Important: The device, from which you initiate a RDP connection an Azure VM must be a Windows 10 or later device, which is also either Microsoft Entra registered (minimum required build is 20H1) or Microsoft Entra joined or Microsoft Entra hybrid joined to the same directory as the VM:exclamation:
+>:exclamation: **Important:** The device, from which you initiate a RDP connection an Azure VM must be a Windows 10 or later device, which is also either Microsoft Entra registered (minimum required build is 20H1) or Microsoft Entra joined or Microsoft Entra hybrid joined to the same directory as the VM.
 
 1. In the Azure portal, download the RDP-file for connecting to your VM.
 2. Double click it to connect.
