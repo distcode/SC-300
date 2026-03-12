@@ -62,7 +62,7 @@ Following the client-side configure is shown so you could enforce
     > Note: Instead of altering the RDP-file in an editor you could also set the advanced option *Use a web account to sign in to the remote computer* in Remote Desktop Connection tool.
 4. Ensure the VM name could be successfully resolved. Maybe you have to change DNS or your hosts file.
 5. Save the file and double click it to connect.
-6. Sign in with Entra ID user principal name. If there are any issues, use the format *AzureAD\\user\@domain.com*.
+6. Sign in with Entra ID user principal name.
 
 ### Password Authentication
 
